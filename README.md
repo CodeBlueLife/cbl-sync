@@ -1,6 +1,6 @@
 # cbl-sync
 
-a
+A full-featured time and weather synchronization system for FiveM servers. Provides realistic dynamic day/night cycles, weather transitions, and zone-specific weather handling, including support for Cayo Perico. Includes admin commands for manual control and debugging.
 
 ## Copyright
 
