@@ -57,7 +57,26 @@ SYNC = {
     end
 }
 
--- TODO: exports here later
+exports('IsSyncing', function()
+    return SYNC:IsSyncing()
+end)
+
+exports('GetTime', function ()
+    return SYNC:GetTime()
+end)
+
+exports('GetWeather', function ()
+    return SYNC:GetWeather()
+end)
+
+exports('StartSync', function ()
+    SYNC:Start()
+end)
+
+exports('StopSync', function ()
+    SYNC:Stop()
+end)
+
 CreateThread(function()
     StartSyncThreads()
 end)

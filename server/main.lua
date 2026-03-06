@@ -249,6 +249,58 @@ SYNC = {
     end
 }
 
+exports("GetTime", function()
+    return SYNC.Get:Time()
+end)
+
+exports("SetTime", function(hour, minute)
+    SYNC.Set:Time(hour, minute)
+end)
+
+exports("SetTimeType", function(type)
+    SYNC.Set:TimeType(type)
+end)
+
+exports("IsTimeFrozen", function()
+    return SYNC.Get:TimeFrozen()
+end)
+
+exports("FreezeTime", function(state)
+    SYNC:FreezeTime(state)
+end)
+
+exports("GetWeather", function()
+    return SYNC.Get:Weather()
+end)
+
+exports("SetWeather", function(weather)
+    SYNC.Set:Weather(weather)
+end)
+
+exports("IsWeatherFrozen", function()
+    return SYNC.Get:WeatherFrozen()
+end)
+
+exports("FreezeWeather", function(state)
+    SYNC:FreezeWeather(state)
+end)
+
+exports("IsNight", function()
+    return SYNC.Get:Night()
+end)
+
+exports("GetBlackout", function()
+    return SYNC.Get:Blackout()
+end)
+
+exports("SetBlackout", function(state)
+    SYNC.Set:Blackout(state)
+end)
+
+exports("NextWeatherStage", function()
+    SYNC:NextWeatherStage()
+end)
+
 AddEventHandler("txAdmin:events:scheduledRestart", function(eventData)
     if eventData.secondsRemaining == 120 then
         SYNC:FreezeWeather(true)
